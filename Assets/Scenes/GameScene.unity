@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementJoystick: {fileID: 1542286759}
-  moveSpeed: 1
+  moveSpeed: 10
 --- !u!58 &16262384
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -661,8 +661,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296893300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0059814453, y: -0.018798828, z: 0}
-  m_LocalScale: {x: 0.78968143, y: 0.506857, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7686567, y: 0.506857, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
