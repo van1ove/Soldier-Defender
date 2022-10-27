@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] MovementJoystick movementJoystick;
+    private float angle;
     public float moveSpeed = 10f;
     private Rigidbody2D rb;
     void Start()
@@ -16,7 +17,7 @@ public class Player : MonoBehaviour
         if (movementJoystick.joystickVector.y != 0)
         {
             rb.velocity = movementJoystick.joystickVector * moveSpeed;
-            float angle = Mathf.Atan(movementJoystick.joystickVector.y / movementJoystick.joystickVector.x) / Mathf.PI * 180;
+            angle = Mathf.Atan(movementJoystick.joystickVector.y / movementJoystick.joystickVector.x) / Mathf.PI * 180;
             if (movementJoystick.joystickVector.x > 0)
             {
                 transform.rotation = Quaternion.Euler(0, 0, -90 + angle);
