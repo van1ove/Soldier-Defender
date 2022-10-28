@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5864640460145947775}
   - component: {fileID: 5864640460145947774}
   - component: {fileID: 5864640460145947769}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5864640460145947770}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -137,8 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 5864640460145947770}
-  positionToSpawn: {fileID: 0}
-  positionForVector: {fileID: 0}
-  flightSpeed: 100
   lifetime: 5
   timer: 2
