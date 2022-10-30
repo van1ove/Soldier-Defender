@@ -8,15 +8,18 @@ public class Player : MonoBehaviour
     private float angle;
     public float moveSpeed = 10f;
     private Rigidbody2D rb;
+    private Animator goAnim;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        goAnim = GetComponent<Animator>();
     }
     void FixedUpdate()
     {
         if (movementJoystick.joystickVector.y != 0)
         {
             rb.velocity = movementJoystick.joystickVector * moveSpeed;
+            goAnim.SetBool("Go", true);
             if (movementJoystick.joystickVector.x != 0)
             {
                 angle = Mathf.Atan(movementJoystick.joystickVector.y / movementJoystick.joystickVector.x) / Mathf.PI * 180;
@@ -38,7 +41,8 @@ public class Player : MonoBehaviour
         else
         {
             rb.velocity = Vector2.zero;
-            transform.Rotate(0, 0, 0);
+            goAnim.SetBool("Go", false);
         }
     }
+
 }
