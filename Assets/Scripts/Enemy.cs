@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private int health = 100;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject enemy;
+    private void OnCollisionEnter2D(Collision2D other) 
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.layer == 8) 
+        {
+            Destroy(enemy);
+        }    
     }
 }

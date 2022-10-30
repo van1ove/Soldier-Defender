@@ -5,17 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
-    // public Transform positionToSpawn, positionForVector;
-    // private Rigidbody2D rb;
-    // public float flightSpeed = 100f, 
     public float lifetime = 3f, timer = 0f;
-    // void Start()
-    // {
-    //     rb = GetComponent<Rigidbody2D>();
-    //     transform.rotation = FindObjectOfType<Player>().transform.rotation;
-    //     rb.velocity = new Vector3(positionToSpawn.position.x - positionForVector.position.x, 
-    //         positionToSpawn.position.y - positionForVector.position.y,- 0) * flightSpeed * Time.deltaTime;
-    // }
 
     void Update()
     {
@@ -24,5 +14,13 @@ public class Bullet : MonoBehaviour
         {
             Destroy(bullet);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        if (other.gameObject.layer == 6) 
+        {
+            Destroy(bullet);
+        }    
     }
 }
