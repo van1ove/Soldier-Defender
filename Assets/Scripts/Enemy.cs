@@ -9,11 +9,12 @@ public class Enemy : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private bool isDead = false;
+    private float delay;
      
     void Start()
     {
         anim = GetComponent<Animator>();
-        anim.SetBool("Walk", true);
+        anim.SetTrigger("Walk");
 
         rb = GetComponent<Rigidbody2D>();
         Vector2 direction = new Vector2(this.transform.position.x - FindObjectOfType<Spawner>().followPoint.position.x,
@@ -22,17 +23,22 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-        if (isDead) Destroy(enemy, 3f);
+        if (isDead) Destroy(enemy, delay);
     }
     private void OnCollisionEnter2D(Collision2D other) 
     {
         if (other.gameObject.layer == 8) 
         {
-            anim.SetBool("Walk", false);
-            isDead = true;
-            rb.bodyType = RigidbodyType2D.Static;
-            enemy.GetComponent<CircleCollider2D>().enabled = false;
+            anim.SetTrigger("Die");
+            delay = 3f;
         }    
-        else if (other.gameObject.layer == 7) Destroy(enemy);
+        else if (other.gameObject.layer == 7) 
+        {
+            anim.SetTrigger("Explode");
+            delay = 1f;
+        }
+        rb.bodyType = RigidbodyType2D.Static;
+        enemy.GetComponent<CircleCollider2D>().enabled = false;
+        isDead = true;
     }
 }

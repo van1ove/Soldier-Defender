@@ -23,6 +23,7 @@ public class MovementJoystick : MonoBehaviour
     {
         joystick.transform.position = Input.mousePosition;
         joystickTouchPosition = Input.mousePosition;
+        FindObjectOfType<Player>().Down();
     }
 
     public void Drag(BaseEventData baseEventData)
@@ -48,5 +49,6 @@ public class MovementJoystick : MonoBehaviour
         joystickVector = Vector2.zero;
         joystick.transform.position = joystickOriginalPosition;
         joystickBackground.transform.position = joystickOriginalPosition;
+        FindObjectOfType<Player>().Up();
     }
 }
