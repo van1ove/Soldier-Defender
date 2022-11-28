@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] GameObject enemy;
+    [SerializeField] GameObject enemy, explosion;
     [SerializeField] float speed = 100f; 
     private Animator anim;
     private Rigidbody2D rb;
@@ -23,7 +23,10 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-        if (isDead) Destroy(enemy, delay);
+        if (isDead) 
+        {
+            Destroy(enemy, delay);
+        }
     }
     private void OnCollisionEnter2D(Collision2D other) 
     {
@@ -34,6 +37,7 @@ public class Enemy : MonoBehaviour
         }    
         else if (other.gameObject.layer == 7) 
         {
+            Instantiate(explosion, enemy.transform.position, Quaternion.identity);
             anim.SetTrigger("Explode");
             delay = 1f;
         }

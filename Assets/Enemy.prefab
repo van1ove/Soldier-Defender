@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8035976426840322576}
+  explosion: {fileID: 139366, guid: 560862751ac50a14c9002b6f3ad80873, type: 3}
   speed: 150
 --- !u!95 &8035976427210596488
 Animator:
