@@ -47,6 +47,7 @@ ScriptedImporter:
     flipbookRows: 0
     flipbookColumns: 0
     ignorePngGamma: 0
+    cookieMode: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -89,6 +90,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: "barricadeWood \u043A\u043E\u043F\u0438\u044F 2"
@@ -111,7 +113,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -252, y: 562}
+    uvTransform: {x: 4, y: 876}
+    spritePosition: {x: 256, y: 314}
   - name: "barricadeWood \u043A\u043E\u043F\u0438\u044F"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +135,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 244, y: -311}
+    uvTransform: {x: 412, y: 4}
+    spritePosition: {x: 168, y: 315}
   - name: barricadeWood
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -153,7 +157,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 332, y: -233}
+    uvTransform: {x: 412, y: 82}
+    spritePosition: {x: 80, y: 315}
   - name: "bulletRed1_outline \u043A\u043E\u043F\u0438\u044F"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -174,7 +179,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -274, y: 562}
+    uvTransform: {x: 82, y: 876}
+    spritePosition: {x: 356, y: 314}
   - name: bulletRed1_outline
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -195,7 +201,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 410, y: -154}
+    uvTransform: {x: 412, y: 160}
+    spritePosition: {x: 2, y: 314}
   - name: ship_0010
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -216,7 +223,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -274, y: 704}
+    uvTransform: {x: 4, y: 784}
+    spritePosition: {x: 278, y: 80}
   - name: ship_0008
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -237,7 +245,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -17, y: 618}
+    uvTransform: {x: 4, y: 704}
+    spritePosition: {x: 21, y: 86}
   - name: ship_0005
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -258,7 +267,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -10, y: 328}
+    uvTransform: {x: 132, y: 412}
+    spritePosition: {x: 142, y: 84}
   - name: ship_0000
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -279,7 +289,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -266, y: 218}
+    uvTransform: {x: 4, y: 412}
+    spritePosition: {x: 270, y: 194}
   - name: ship_0002
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -300,7 +311,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -140, y: 308}
+    uvTransform: {x: 4, y: 510}
+    spritePosition: {x: 144, y: 202}
   - name: ship_0001
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -321,7 +333,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -17, y: 412}
+    uvTransform: {x: 4, y: 606}
+    spritePosition: {x: 21, y: 194}
   - name: "\u0424\u043E\u043D"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -343,6 +356,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
   characterData:
     bones: []
     parts: []

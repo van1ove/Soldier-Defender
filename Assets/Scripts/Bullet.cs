@@ -20,6 +20,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.layer == 6) 
         {
+            FindObjectOfType<Score>().GetPoints();
             Destroy(bullet);
         }    
     }

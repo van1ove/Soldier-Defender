@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] GameObject enemy, explosion;
     [SerializeField] float speed = 100f; 
+    private GameObject boom;
     private Animator anim;
     private Rigidbody2D rb;
     private bool isDead = false;
@@ -26,6 +27,7 @@ public class Enemy : MonoBehaviour
         if (isDead) 
         {
             Destroy(enemy, delay);
+            Destroy(boom, delay);
         }
     }
     private void OnCollisionEnter2D(Collision2D other) 
@@ -37,9 +39,11 @@ public class Enemy : MonoBehaviour
         }    
         else if (other.gameObject.layer == 7) 
         {
-            Instantiate(explosion, enemy.transform.position, Quaternion.identity);
+            boom = Instantiate(explosion, enemy.transform.position, Quaternion.identity);
             anim.SetTrigger("Explode");
             delay = 1f;
+            FindObjectOfType<HealthSystem>().GetDamage();
+            FindObjectOfType<HealthSystem>().SetColor();
         }
         rb.bodyType = RigidbodyType2D.Static;
         enemy.GetComponent<CircleCollider2D>().enabled = false;
