@@ -19,4 +19,7 @@ public class Score : MonoBehaviour
         result++;
         score.text = result.ToString();
     }
+
+    public int GetResult(){ return result;}
+    
 }

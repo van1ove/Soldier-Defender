@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -35,7 +36,8 @@ public class HealthSystem : MonoBehaviour
         }
         else 
         {
-            Time.timeScale = 0f;
+            FindObjectOfType<PanelsBehavior>().EndGame();    
         }
     }
+
 }
