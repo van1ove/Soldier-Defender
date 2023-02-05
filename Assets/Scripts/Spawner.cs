@@ -8,37 +8,25 @@ public class Spawner : MonoBehaviour
     [SerializeField] static int size;
     public Transform followPoint;
     public Transform[] spawnPoints = new Transform[size];
-    private float timer, angle, totalAngle; 
-    private float spawnTime = 1f;
-    private Vector3 spawnVector, followVector;
+    private float delay = 1f;
+    private Vector3 spawnVector;
+    private Quaternion spawnRotation;
     private int position;
     void Start()
     {
-        timer = spawnTime;
+        StartCoroutine(SpawnEnemies());
     }
-    void Update()
+
+    IEnumerator SpawnEnemies()
     {
-        if(timer <= 0)
+        while(true)
         {
             position = Random.Range(0, spawnPoints.Length - 1);
             spawnVector = spawnPoints[position].transform.position;
-            followVector = followPoint.transform.position;
+            spawnRotation = spawnPoints[position].rotation;
 
-            angle = 180 * Mathf.Atan((spawnVector.y - followVector.y) / (spawnVector.x - followVector.x)) / Mathf.PI;
-            if(spawnPoints.Length == 13)
-            {
-                if(angle == float.PositiveInfinity) totalAngle = -90;
-                else if (angle < 0) totalAngle = -90 + angle;
-                else totalAngle = 90 + angle;
-            }
-            else if (spawnPoints.Length == 10)
-            {
-                totalAngle = -90 + angle;
-            }
-
-            Instantiate(enemy, spawnVector, Quaternion.Euler(0, 0, totalAngle));
-            timer = spawnTime;
+            Instantiate(enemy, spawnVector, spawnRotation);
+            yield return new WaitForSeconds(delay);
         }
-        timer -= Time.deltaTime; 
     }
 }
