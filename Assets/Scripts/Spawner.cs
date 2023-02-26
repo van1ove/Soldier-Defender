@@ -6,9 +6,10 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
     [SerializeField] static int size;
+    [SerializeField] float delay;
     public Transform followPoint;
     public Transform[] spawnPoints = new Transform[size];
-    private float delay = 1f;
+    
     private Vector3 spawnVector;
     private Quaternion spawnRotation;
     private int position;

@@ -4,22 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Score : MonoBehaviour
+namespace UIElements
 {
-    [SerializeField] TextMeshProUGUI score;
-    private int result;
-    void Start()
+    public class Score : MonoBehaviour
     {
-        score.text = "0";
-        result = 0;    
-    }
+        [SerializeField] TextMeshProUGUI score;
+        private int result;
+        void Start()
+        {
+            score.text = "0";
+            result = 0;    
+        }
 
-    public void GetPoints()
-    {
-        result++;
-        score.text = result.ToString();
-    }
+        public void GetPoints()
+        {
+            result++;
+            score.text = result.ToString();
+        }
 
-    public int GetResult(){ return result;}
-    
+        public int GetResult(){ return result;}
+        
+    }
 }
