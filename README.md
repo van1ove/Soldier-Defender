@@ -1,5 +1,5 @@
 # Soldier-Defender
-!!![All scripts in Assets/Scripts]!!!
+$${\color{red} !!![All \space \space scripts \space in \space Assets/Scripts]!!!}$$
 
 Game "Soldier Defender"
 
